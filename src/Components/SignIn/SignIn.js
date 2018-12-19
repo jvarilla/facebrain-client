@@ -20,7 +20,7 @@ class SignIn extends React.Component {
 		//send login info to server make sure it is post
 		console.log(this.state.signinEmail, this.state.signinPassword);
 
-		fetch('http://jvarilla-clarifai-rest.herokuapp.com/signin', {
+		fetch('https://jvarilla-clarifai-rest.herokuapp.com/signin', {
 			method: 'post', //get by default
 			headers: {'Content-Type': 'application/json'},
 			body: JSON.stringify({

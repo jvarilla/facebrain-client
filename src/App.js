@@ -94,7 +94,7 @@ class App extends Component {
 
   onBtnSubmit = () => {
     this.setState({imageUrl: this.state.input});
-    fetch('http://jvarilla-clarifai-rest.herokuapp.com/imageurl', {
+    fetch('https://jvarilla-clarifai-rest.herokuapp.com/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -104,7 +104,7 @@ class App extends Component {
     .then(response => response.json())
     .then(response => {
        if (response) {
-        fetch('http://jvarilla-clarifai-rest.herokuapp.com/image', {
+        fetch('https://jvarilla-clarifai-rest.herokuapp.com/image', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
