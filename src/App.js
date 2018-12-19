@@ -94,7 +94,7 @@ class App extends Component {
 
   onBtnSubmit = () => {
     this.setState({imageUrl: this.state.input});
-    fetch('https://guarded-river-37677.herokuapp.com/imageurl', {
+    fetch(process.env.REST_API + '/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -104,7 +104,7 @@ class App extends Component {
     .then(response => response.json())
     .then(response => {
        if (response) {
-        fetch('https://guarded-river-37677.herokuapp.com/image', {
+        fetch(process.env.REST_API +'/image', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
