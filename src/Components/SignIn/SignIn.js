@@ -20,7 +20,7 @@ class SignIn extends React.Component {
 		//send login info to server make sure it is post
 		console.log(this.state.signinEmail, this.state.signinPassword);
 
-		fetch(process.env.REST_API + '/signin', {
+		fetch(`${process.env.REST_API}signin`, {
 			method: 'post', //get by default
 			headers: {'Content-Type': 'application/json'},
 			body: JSON.stringify({
