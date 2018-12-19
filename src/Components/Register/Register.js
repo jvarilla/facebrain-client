@@ -26,7 +26,7 @@ class Register extends React.Component {
 			//send login info to server make sure it is post
 			console.log(this.state.signinEmail, this.state.signinPassword);
 
-			fetch(`${process.env.REST_API}register`, {
+			fetch('http://jvarilla-clarifai-rest.herokuapp.com/register', {
 				method: 'post', //get by default
 				headers: {'Content-Type': 'application/json'},
 				body: JSON.stringify({
